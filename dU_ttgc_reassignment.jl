@@ -229,7 +229,7 @@ function dU_ttgc_reassignment(
     Up += (Rj' - M * Up')' ./ Vj'
   end
 
-  # Return update to solution state `Up`
-  return Up
+  # Return squared l2-norm of update to solution state `Up`
+  return sum(abs2, Up)
 
 end # dU_ttgc_reassignment
