@@ -503,7 +503,7 @@ function dU_ttgc_mutation(
 
   end # for _
 
-  # Return update to solution state `Up`
-  return Up
+  # Return squared l2-norm of update to solution state `Up`
+  return sum(abs2, Up)
   
 end # dU_ttgc_mutation
